@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+    <script type="text/javascript">
+        Paddle.Setup({
+        token: 'live_a116b134746a5f932c45d736f88',
+        checkout: {
+        settings: {
+         displayMode: "overlay",
+         theme: "light",
+         locale: "en"
+    }
+  }
+  });
+</script>
+
+</head>
+<body>
+    <script type="text/javascript">
+        function openCheckout() {
+          Paddle.Checkout.open({
+            settings: {
+              theme: "light",
+            },
+            items: [
+              {
+                priceId: 'pri_01hgd5tr041zdhem2jezv14fd9',
+                quantity: 1
+              },
+              {
+                priceId: 'pri_01hgd5t6gfzdjv5af43wtmpn8f',
+                quantity: 1
+              }
+            ]
+          });
+        }
+      </script>
+      <a href='#' onclick='openCheckout()'>Buy now</a>
+</body>
+</html>
